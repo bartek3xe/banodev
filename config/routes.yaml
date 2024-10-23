@@ -3,3 +3,15 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+_locale_prefix:
+    resource: ../src/Controller/**/*
+    type: attribute
+    prefix: /{_locale}
+    requirements:
+        _locale: pl|en
+    defaults: { _locale: en }
+
+default_redirect:
+    path: /
+    controller: App\Controller\LanguageController::redirectToDefaultLanguage
