@@ -9,7 +9,7 @@ _locale_prefix:
     type: attribute
     prefix: /{_locale}
     requirements:
-        _locale: pl|en
+        _locale: pl|en|de|uk
     defaults: { _locale: en }
 
 default_redirect:

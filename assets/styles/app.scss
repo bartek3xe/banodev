@@ -1,0 +1,110 @@
+@use '@styles/_variables.scss' as vars;
+@use '@fonts/_fonts.scss';
+@use '@styles/_partials/nav.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: FreeSans, sans-serif;
+  position: relative;
+  background-color: vars.$background-color-dark;
+  color: vars.$text-color;
+
+  .card {
+    background-color: vars.$card-color-dark;
+    border-radius: 24px;
+    padding: 24px;
+  }
+
+  .header {
+    color: vars.$header-color-dark;
+  }
+
+  &.light {
+    background-color: vars.$background-color-light;
+
+    .card {
+      background-color: vars.$card-color-light
+    }
+
+    .header {
+      color: vars.$header-color-light;
+    }
+  }
+}
+
+.oswald-font {
+  font-family: Oswald, sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.bolder {
+    font-weight: bolder;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: vars.$text-color;
+  transition: vars.$default-transition;
+
+  &:hover {
+    color: vars.$main-color;
+  }
+}
+
+.btn {
+  position: relative;
+  border: solid 2px vars.$text-color;
+  padding: 6px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: vars.$text-color;
+  transition: vars.$default-transition;
+  overflow: hidden;
+  font-weight: bolder;
+
+  &:hover {
+    color: vars.$third-color;
+    border: solid 2px vars.$main-color;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: vars.$main-color;
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    transition: vars.$default-transition;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.main-content {
+  width: 100%;
+  padding: 0 10% 0;
+  box-sizing: border-box;
+}
+.navigation {
+  margin-top: calc(#{vars.$nav-height} + #{2 * vars.$main-margin});
+}
+
+.page {
+  height: calc(#{vars.$nav-height} + #{2 * vars.$main-margin});
+}
