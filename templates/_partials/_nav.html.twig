@@ -1,0 +1,39 @@
+<nav class="nav">
+    <div class="nav-float left">
+        <button class="nav-color-switch">
+            Color mode
+            <img class="img-light active" src="{{ asset('build/images/light-icon.svg') }}" alt="Light icon, switch to dark"/>
+            <img class="img-dark" src="{{ asset('build/images/dark-icon.svg') }}" alt="Dark icon, switch to light"/>
+        </button>
+    </div>
+    <span class="nav-logo">BANO</span>
+    <span class="nav-pipe">|</span>
+    <ul class="nav-list">
+        <li class="nav-element"><a class="link active" href="">Home</a></li>
+        <li class="nav-element"><a class="link" href="#">About</a></li>
+        <li class="nav-element"><a class="link" href="#">Projects</a></li>
+        <li class="nav-element"><a class="link" href="#">Contact</a></li>
+    </ul>
+    <span class="nav-pipe">|</span>
+    <a class="btn" href="#"><span>Hire me</span></a>
+    <div class="nav-float right">
+        <div class="nav-lang">
+            <button class="nav-lang-button link">
+                {{ get_locale_name(app.locale) }}
+                <i class="fi fi-{{ get_locale_flag(app.locale) }} fis fi-lang"></i>
+            </button>
+            <ul class="flag-dropdown">
+                {% for locale in get_all_locales() %}
+                    {% if app.locale != locale.code %}
+                        <li>
+                            <a class="link" href="{{ path('app_language_changer', { 'locale': locale.code }) }}">
+                                {{ locale.name }}
+                                <i class="fi fi-{{ locale.flag }} fis fi-lang"></i>
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>

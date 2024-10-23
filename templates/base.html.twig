@@ -10,9 +10,19 @@
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
+{#            {{ encore_entry_script_tags('js/flash') }}#}
+            {{ encore_entry_script_tags('js/nav') }}
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <section class="main-content">
+            <div class="navigation">
+                {% include('_partials/_nav.html.twig') %}
+            </div>
+
+            <div class="page">
+                {% block body %}{% endblock %}
+            </div>
+        </section>
     </body>
 </html>

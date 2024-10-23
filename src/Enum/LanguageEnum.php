@@ -10,12 +10,16 @@ enum LanguageEnum: string
 
     case POLISH = 'pl';
     case ENGLISH = 'en';
+    case GERMAN = 'de';
+    case UKRAINIAN = 'uk';
 
     public static function getNativeName(LanguageEnum $enum): string
     {
         return match ($enum) {
             self::POLISH => 'Polski',
             self::ENGLISH => 'English',
+            self::GERMAN => 'Deutsch',
+            self::UKRAINIAN => 'Українська',
         };
     }
 
@@ -24,6 +28,8 @@ enum LanguageEnum: string
         return match ($enum) {
             self::POLISH => 'pl',
             self::ENGLISH => 'gb',
+            self::GERMAN => 'de',
+            self::UKRAINIAN => 'ua',
         };
     }
 
