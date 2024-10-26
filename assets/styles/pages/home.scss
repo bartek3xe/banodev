@@ -1,0 +1,103 @@
+@use '@styles/variables' as vars;
+
+.home-grid-container {
+  gap: 20px;
+  padding: 24px;
+
+  .box {
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform .2s ease-in-out ;
+
+    &.profile {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+
+      .social {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 12px 0;
+
+        a {
+          position: relative;
+          display: inline-block;
+
+          svg {
+            width: 30px;
+            height: 30px;
+            fill: vars.$text-color;
+            transition: vars.$default-transition;
+          }
+
+          &:hover svg {
+            fill: vars.$main-color;
+          }
+        }
+      }
+    }
+    .service-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-around;
+
+      .icon-link {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .offer-icons {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+
+      .offer-element {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      svg {
+        width: 50px;
+        height: 50px;
+        fill: vars.$main-color;
+      }
+    }
+
+    .statistics {
+      background-color: vars.$main-color;
+    }
+  }
+
+  .box.approach {
+    background-image: url('/public/build/images/approach-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    h2 {
+      color: vars.$header-color-dark;
+    }
+  }
+
+  .box-link {
+    text-decoration: none;
+
+    &:hover .box {
+      transform: translate(0, -6px);
+    }
+  }
+}
+
+body.light .home-grid-container {
+
+
+  svg {
+    fill: vars.$main-color;
+  }
+}
