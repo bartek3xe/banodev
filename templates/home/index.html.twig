@@ -3,36 +3,22 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block body %}
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
-    <div class="card">siemano siemano <br>asdasdas</div>
+    <div class="home-grid-container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box mb-4 profile">
+                    {% include('home/cards/_profile.html.twig') %}
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="box mb-4 main">
+                    {% include('home/cards/_main.html.twig') %}
+                </div>
+
+                <div class="row">
+                    {% include('home/cards/_boxes.html.twig') %}
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

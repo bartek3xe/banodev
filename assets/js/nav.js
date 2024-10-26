@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
     //     body.classList.toggle('no-scroll');
     // });
 
-    document.addEventListener('click', (e) => {
-        if (!navigation.contains(e.target) && !mobileNavBtn.contains(e.target)) {
-            navigation.classList.remove('active');
-            mobileNavBtn.classList.remove('active');
-            overlay.classList.remove('active');
-            body.classList.remove('no-scroll');
-        }
-    });
+    // document.addEventListener('click', (e) => {
+    //     if (!navigation.contains(e.target) && !mobileNavBtn.contains(e.target)) {
+    //         navigation.classList.remove('active');
+    //         mobileNavBtn.classList.remove('active');
+    //         overlay.classList.remove('active');
+    //         body.classList.remove('no-scroll');
+    //     }
+    // });
 
     navigation.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -75,4 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
         colorSwitchBtn.querySelector('.img-light').classList.add('active');
         colorSwitchBtn.querySelector('.img-dark').classList.remove('active');
     }
+
+    let angle = 0;
+
+    function rotateGradient() {
+        angle = (angle + 1) % 360;
+        navigation.style.setProperty('--start-angle', `${angle}deg`);
+        requestAnimationFrame(rotateGradient);
+    }
+
+    rotateGradient();
 });

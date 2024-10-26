@@ -1,6 +1,7 @@
 @use '@styles/_variables.scss' as vars;
 @use '@fonts/_fonts.scss';
 @use '@styles/_partials/nav.scss';
+@use '@styles/pages/home.scss';
 
 body {
   margin: 0;
@@ -11,8 +12,15 @@ body {
   background-color: vars.$background-color-dark;
   color: vars.$text-color;
 
-  .card {
+  .box {
     background-color: vars.$card-color-dark;
+  }
+
+  .box-colored {
+    background-color: vars.$main-color;
+  }
+
+  .box, .box-colored {
     border-radius: 24px;
     padding: 24px;
   }
@@ -24,12 +32,21 @@ body {
   &.light {
     background-color: vars.$background-color-light;
 
-    .card {
+    .box {
       background-color: vars.$card-color-light
     }
 
     .header {
       color: vars.$header-color-light;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+      color: vars.$header-color-light;
+    }
+
+    .box-colored .header,
+    .box-colored h2 {
+      color: vars.$header-color-dark;
     }
   }
 }
@@ -107,4 +124,36 @@ body {
 
 .page {
   height: calc(#{vars.$nav-height} + #{2 * vars.$main-margin});
+}
+
+p {
+  font-family: "Manrope", serif;
+  line-height: 24px;
+  color: vars.$text-color;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0 0 12px 0;
+  font-family: Oswald, serif;
+  color: vars.$header-color-dark;
+}
+
+h1 {
+  font-size: clamp(24px, 5vw, 64px);
+  line-height: clamp(24px, 5vw, 64px);
+}
+
+h3 {
+  font-size: clamp(24px, 3vw, 48px);
+  line-height: clamp(24px, 3vw, 48px);
+}
+
+h5 {
+  font-size: clamp(18px, 3vw, 24px);
+  line-height: clamp(18px, 3vw, 24px);
+}
+
+
+.main-color {
+  color: vars.$main-color;
 }
