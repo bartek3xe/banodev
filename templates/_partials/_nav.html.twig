@@ -4,7 +4,9 @@
     <button class="mobile-menu-btn nav-float left" aria-label="Open navigation menu">
         <span>&#9776;</span>
     </button>
-    <span class="nav-logo mobile-nav-logo">BANO</span>
+    <a class="nav-logo mobile-nav-logo" href="{{ path('app_home') }}">
+         <img src="{{ asset('build/images/banodev-logo-nav.png') }}" alt="Bartosz Nowak BANO logo"/>
+    </a>
     <div class="mobile-hidden">
         <div class="nav-float left">
             <button class="nav-color-switch">
@@ -13,7 +15,9 @@
                 <img class="img-dark" src="{{ asset('build/images/icons/switch-dark-icon.svg') }}" alt="Dark icon, switch to light"/>
             </button>
         </div>
-        <span class="nav-logo">BANO</span>
+        <a class="nav-logo" href="{{ path('app_home') }}">
+             <img src="{{ asset('build/images/banodev-logo-nav.png') }}" alt="Bartosz Nowak BANO logo"/>
+        </a>
         <span class="nav-pipe">|</span>
         <ul class="nav-list">
             <li class="nav-element"><a class="link active" href="">Home</a></li>

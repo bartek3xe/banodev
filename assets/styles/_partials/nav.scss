@@ -92,6 +92,10 @@ body {
     &-logo {
       display: flex;
       align-items: center;
+
+      img {
+        height: 14px;
+      }
     }
 
     &-list {
@@ -182,7 +186,12 @@ body {
       }
 
       .mobile-nav-logo {
-        display: block;
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 12px;
+        }
       }
 
       .mobile-menu-btn {
