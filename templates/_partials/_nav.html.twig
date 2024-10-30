@@ -1,22 +1,29 @@
+<div class="navbar-overlay"></div>
 <nav class="nav">
     <div class="nav-background"></div>
-    <div class="nav-float left">
-        <button class="nav-color-switch">
-            Dark / Light
-            <img class="img-light active" src="{{ asset('build/images/icons/switch-light-icon.svg') }}" alt="Light icon, switch to dark"/>
-            <img class="img-dark" src="{{ asset('build/images/icons/switch-dark-icon.svg') }}" alt="Dark icon, switch to light"/>
-        </button>
+    <button class="mobile-menu-btn nav-float left" aria-label="Open navigation menu">
+        <span>&#9776;</span>
+    </button>
+    <span class="nav-logo mobile-nav-logo">BANO</span>
+    <div class="mobile-hidden">
+        <div class="nav-float left">
+            <button class="nav-color-switch">
+                Dark / Light
+                <img class="img-light active" src="{{ asset('build/images/icons/switch-light-icon.svg') }}" alt="Light icon, switch to dark"/>
+                <img class="img-dark" src="{{ asset('build/images/icons/switch-dark-icon.svg') }}" alt="Dark icon, switch to light"/>
+            </button>
+        </div>
+        <span class="nav-logo">BANO</span>
+        <span class="nav-pipe">|</span>
+        <ul class="nav-list">
+            <li class="nav-element"><a class="link active" href="">Home</a></li>
+            <li class="nav-element"><a class="link" href="#">About</a></li>
+            <li class="nav-element"><a class="link" href="#">Offer</a></li>
+            <li class="nav-element"><a class="link" href="#">Work Approach</a></li>
+        </ul>
+        <span class="nav-pipe">|</span>
+        <a class="btn" href="#"><span>Hire me</span></a>
     </div>
-    <span class="nav-logo">BANO</span>
-    <span class="nav-pipe">|</span>
-    <ul class="nav-list">
-        <li class="nav-element"><a class="link active" href="">Home</a></li>
-        <li class="nav-element"><a class="link" href="#">About</a></li>
-        <li class="nav-element"><a class="link" href="#">Offer</a></li>
-        <li class="nav-element"><a class="link" href="#">Work Approach</a></li>
-    </ul>
-    <span class="nav-pipe">|</span>
-    <a class="btn" href="#"><span>Hire me</span></a>
     <div class="nav-float right">
         <div class="nav-lang">
             <button class="nav-lang-button link">
