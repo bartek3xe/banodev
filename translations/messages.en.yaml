@@ -1,0 +1,30 @@
+button.hire_me: Hire me
+nav.link.home: Home
+nav.link.about: About
+nav.link.offer: Offer
+nav.link.work_approach: Work Approach
+nav.button.color_switch: Dark / Light
+home.profile.header: PHP Developer, Symfony specialist, creator of CRM systems and websites.
+home.box.about.desc: Professional CRM & E-commerce Developer
+home.box.about.header: ABOUT
+home.box.services.desc: Specialization in Symfony & Sylius
+home.box.services.header: TOOLS
+home.box.experience.desc: Years of experience
+home.box.projects.desc: Implemented projects
+home.box.offer.websites:  Websites
+home.box.offer.web_app:  Web applications
+home.box.offer.crm:  CRM systems
+home.box.offer.ecommerce:  e-Commerce
+home.box.offer.maintenance:  Maintenance and support of existing systems
+home.box.offer.desc: Your goals, my expertise – let's create tailored solutions that drive success
+home.box.offer.header: CHECK OFFER
+home.box.approach.desc: Learn about my approach to client collaboration
+home.box.approach.header: WORK APPROACH
+home.box.contact.desc: Let's work together
+home.box.contact.header: HIRE ME
+home.header.professional: PROFESSIONAL
+home.header.crm_ecommerce: CRM / E-COMMERCE
+home.header.expert: EXPERT
+home.header.and: and
+home.header.web: WEB
+home.header.developer: DEVELOPER

@@ -1,0 +1,30 @@
+button.hire_me: Найняти мене
+nav.link.home: Головна
+nav.link.about: Про мене
+nav.link.offer: Пропозиція
+nav.link.work_approach: Підхід до роботи
+nav.button.color_switch: Темна / Світла
+home.profile.header: PHP-розробник, спеціаліст Symfony, творець CRM-систем та вебсайтів.
+home.box.about.desc: Професійний розробник CRM та e-commerce
+home.box.about.header: ПРО МЕНЕ
+home.box.services.desc: Спеціалізація в Symfony та Sylius
+home.box.services.header: ІНСТРУМЕНТИ
+home.box.experience.desc: Роки досвіду
+home.box.projects.desc: Реалізовані проекти
+home.box.offer.websites: Вебсайти
+home.box.offer.web_app: Веб-додатки
+home.box.offer.crm: CRM-системи
+home.box.offer.ecommerce: e-Commerce
+home.box.offer.maintenance: Підтримка та обслуговування існуючих систем
+home.box.offer.desc: Ваші цілі, моя експертиза – створимо рішення, що принесуть успіх
+home.box.offer.header: ПЕРЕГЛЯНУТИ ПРОПОЗИЦІЮ
+home.box.approach.desc: Дізнайтеся про мій підхід до співпраці з клієнтами
+home.box.approach.header: ПІДХІД ДО РОБОТИ
+home.box.contact.desc: Працюймо разом
+home.box.contact.header: НАЙНЯТИ МЕНЕ
+home.header.professional: ПРОФЕСІЙНИЙ
+home.header.crm_ecommerce: CRM / E-COMMERCE
+home.header.expert: ЕКСПЕРТ
+home.header.and: та
+home.header.web: ВЕБ
+home.header.developer: РОЗРОБНИК
