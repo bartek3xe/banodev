@@ -1,0 +1,30 @@
+button.hire_me: Zatrudnij mnie
+nav.link.home: Strona główna
+nav.link.about: O mnie
+nav.link.offer: Oferta
+nav.link.work_approach: Podejście do pracy
+nav.button.color_switch: Ciemny / Jasny
+home.profile.header: PHP Developer, specjalista Symfony, twórca systemów CRM i stron internetowych.
+home.box.about.desc: Profesjonalny developer CRM & e-commerce
+home.box.about.header: O MNIE
+home.box.services.desc: Specjalizacja w Symfony & Sylius
+home.box.services.header: NARZĘDZIA
+home.box.experience.desc: Lata doświadczenia
+home.box.projects.desc: Wdrożone projekty
+home.box.offer.websites: Strony internetowe
+home.box.offer.web_app: Aplikacje webowe
+home.box.offer.crm: Systemy CRM
+home.box.offer.ecommerce: e-Commerce
+home.box.offer.maintenance: Utrzymanie i serwis istniejących systemów
+home.box.offer.desc: Twoje cele, moja wiedza – twórzmy rozwiązania dopasowane do sukcesu
+home.box.offer.header: SPRAWDŹ OFERTĘ
+home.box.approach.desc: Dowiedz się o moim podejściu do współpracy z klientem
+home.box.approach.header: PODEJŚCIE DO PRACY
+home.box.contact.desc: Współpracujmy
+home.box.contact.header: ZATRUDNIJ MNIE
+home.header.professional: PROFESJONALNY
+home.header.crm_ecommerce: CRM / E-COMMERCE
+home.header.expert: EKSPERT
+home.header.and: i
+home.header.web: WEB
+home.header.developer: DEWELOPER
