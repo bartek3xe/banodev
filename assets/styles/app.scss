@@ -1,8 +1,9 @@
 @use '@styles/_variables.scss' as vars;
 @use '@fonts/_fonts.scss';
 @use '@styles/_partials/nav.scss';
-@use '@styles/pages/home.scss';
 @use '@styles/pages/error.scss';
+@use '@styles/pages/home.scss';
+@use '@styles/pages/about.scss';
 
 body {
   margin: 0;
@@ -208,4 +209,12 @@ footer {
 
 .footer-watermark {
   font-size: 12px;
+}
+
+.svg-picture {
+  max-width: 500px;
+
+  &.small {
+    max-width: 350px;
+  }
 }

@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <div class="home-grid-container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="about-me-page box">
+                    <section class="intro-section">
+                        <h1 class="intro-header">{{ 'about.intro.header'|trans }}</h1>
+                        <p class="intro-description">{{ 'about.intro.description'|trans }}</p>
+                        <img class="svg-picture" src="{{ asset('build/images/server_work.svg') }}" alt="">
+                    </section>
+                    <section class="timeline-section">
+                        <h2 class="timeline-header">{{ 'about.timeline.header'|trans }}</h2>
+
+                        <div class="timeline mb-4">
+                            <div class="timeline-item">
+                                <div class="timeline-item-header header">
+                                    <h3 class="timeline-item-title">{{ 'about.timeline.kramsoft.title'|trans }}</h3>
+                                </div>
+                                <p class="timeline-item-description">{{ 'about.timeline.kramsoft.description'|trans }}</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-item-header header">
+                                    <h3 class="timeline-item-title">{{ 'about.timeline.rccloud.title'|trans }}</h3>
+                                </div>
+                                <p class="timeline-item-description">{{ 'about.timeline.rccloud.description'|trans }}</p>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-item-header header">
+                                    <h3 class="timeline-item-title">{{ 'about.timeline.conicode.title'|trans }}</h3>
+                                </div>
+                                <p class="timeline-item-description">{{ 'about.timeline.conicode.description'|trans }}</p>
+                                <p class="timeline-item-team">{{ 'about.timeline.conicode.team'|trans }}</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
