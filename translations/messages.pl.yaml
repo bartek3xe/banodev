@@ -1,30 +1,32 @@
-button.hire_me: Zatrudnij mnie
-nav.link.home: Strona główna
-nav.link.about: O mnie
-nav.link.offer: Oferta
-nav.link.work_approach: Podejście do pracy
-nav.button.color_switch: Ciemny / Jasny
-home.profile.header: PHP Developer, specjalista Symfony, twórca systemów CRM i stron internetowych.
-home.box.about.desc: Profesjonalny developer CRM & e-commerce
-home.box.about.header: O MNIE
-home.box.services.desc: Specjalizacja w Symfony & Sylius
-home.box.services.header: NARZĘDZIA
-home.box.experience.desc: Lata doświadczenia
-home.box.projects.desc: Wdrożone projekty
-home.box.offer.websites: Strony internetowe
-home.box.offer.web_app: Aplikacje webowe
-home.box.offer.crm: Systemy CRM
-home.box.offer.ecommerce: e-Commerce
-home.box.offer.maintenance: Utrzymanie i serwis istniejących systemów
-home.box.offer.desc: Twoje cele, moja wiedza – twórzmy rozwiązania dopasowane do sukcesu
-home.box.offer.header: SPRAWDŹ OFERTĘ
-home.box.approach.desc: Dowiedz się o moim podejściu do współpracy z klientem
-home.box.approach.header: PODEJŚCIE DO PRACY
-home.box.contact.desc: Współpracujmy
-home.box.contact.header: ZATRUDNIJ MNIE
-home.header.professional: PROFESJONALNY
-home.header.crm_ecommerce: CRM / E-COMMERCE
-home.header.expert: EKSPERT
-home.header.and: i
-home.header.web: WEB
-home.header.developer: DEWELOPER
+button.contact: "Kontakt"
+nav.link.home: "Strona główna"
+nav.link.about: "O mnie"
+nav.link.offer: "Portfolio"
+nav.link.work_approach: "Moje podejście"
+nav.button.color_switch: "Jasny / Ciemny"
+home.profile.header: "Programista PHP & Specjalista Symfony | Tworzenie wydajnych rozwiązań internetowych"
+home.box.about.desc: "Doświadczony programista PHP specjalizujący się w Symfony i platformach e-commerce jak Sylius."
+home.box.about.header: "O MNIE"
+home.box.services.desc: "Biegły w narzędziach i technologiach do nowoczesnego rozwoju webowego."
+home.box.services.header: "STACK TECHNOLOGICZNY"
+home.box.experience.desc: "Lata doświadczenia"
+home.box.projects.desc: "Zrealizowane projekty"
+home.box.offer.websites: "Responsywne strony"
+home.box.offer.web_app: "Aplikacje internetowe"
+home.box.offer.crm: "Dedykowane systemy CRM"
+home.box.offer.ecommerce: "Rozwiązania e-commerce"
+home.box.offer.maintenance: "Stała opieka"
+home.box.offer.desc: "Zapoznaj się z moimi projektami przedstawiającymi różnorodne rozwiązania webowe dopasowane do potrzeb klienta."
+home.box.offer.header: "PORTFOLIO GITHUB"
+home.box.approach.desc: "Poznaj moje podejście do rozwoju zawodowego i realizacji projektów"
+home.box.approach.header: "MOJE PODEJŚCIE"
+home.box.contact.desc: "Skontaktuj się, aby omówić potencjalne projekty"
+home.box.contact.header: "KONTAKT"
+home.header.professional: "PROFESJONALNY"
+home.header.crm_ecommerce: "CRM / E-COMMERCE"
+home.header.expert: "EKSPERT"
+home.header.and: "i"
+home.header.web: "WEB"
+home.header.developer: "DEWELOPER"
+home.greeting.hi: "Cześć!"
+home.greeting.intro: "To ja"

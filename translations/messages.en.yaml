@@ -1,30 +1,35 @@
-button.hire_me: Hire me
-nav.link.home: Home
-nav.link.about: About
-nav.link.offer: Offer
-nav.link.work_approach: Work Approach
-nav.button.color_switch: Dark / Light
-home.profile.header: PHP Developer, Symfony specialist, creator of CRM systems and websites.
-home.box.about.desc: Professional CRM & E-commerce Developer
-home.box.about.header: ABOUT
-home.box.services.desc: Specialization in Symfony & Sylius
-home.box.services.header: TOOLS
-home.box.experience.desc: Years of experience
-home.box.projects.desc: Implemented projects
-home.box.offer.websites:  Websites
-home.box.offer.web_app:  Web applications
-home.box.offer.crm:  CRM systems
-home.box.offer.ecommerce:  e-Commerce
-home.box.offer.maintenance:  Maintenance and support of existing systems
-home.box.offer.desc: Your goals, my expertise – let's create tailored solutions that drive success
-home.box.offer.header: CHECK OFFER
-home.box.approach.desc: Learn about my approach to client collaboration
-home.box.approach.header: WORK APPROACH
-home.box.contact.desc: Let's work together
-home.box.contact.header: HIRE ME
-home.header.professional: PROFESSIONAL
-home.header.crm_ecommerce: CRM / E-COMMERCE
-home.header.expert: EXPERT
-home.header.and: and
-home.header.web: WEB
-home.header.developer: DEVELOPER
+button.contact: "Contact"
+nav.link.home: "Home"
+nav.link.about: "About Me"
+nav.link.offer: "Portfolio"
+nav.link.work_approach: "My Approach"
+nav.button.color_switch: "Dark / Light"
+home.profile.header: "PHP Developer & Symfony Specialist | Building Efficient Web Solutions"
+home.box.about.desc: "Experienced PHP developer specializing in Symfony and e-commerce platforms like Sylius."
+home.box.about.header: "ABOUT ME"
+home.box.services.desc: "Proficient in tools and technologies for modern web development."
+home.box.services.header: "TECH STACK"
+home.box.experience.desc: "Years of Experience"
+home.box.projects.desc: "Completed Projects"
+home.box.offer.websites: "Responsive Websites"
+home.box.offer.web_app: "Web Applications"
+home.box.offer.crm: "Custom CRM Systems"
+home.box.offer.ecommerce: "E-Commerce Solutions"
+home.box.offer.maintenance: "Ongoing Maintenance"
+home.box.offer.desc: "Explore my projects showcasing diverse web solutions tailored to meet client needs."
+home.box.offer.header: "GITHUB PORTFOLIO"
+home.box.approach.desc: "Discover my approach to professional development and project execution"
+home.box.approach.header: "MY APPROACH"
+home.box.contact.desc: "Get in touch"
+home.box.contact.header: "CONTACT ME"
+home.header.professional: "PROFESSIONAL"
+home.header.crm_ecommerce: "CRM / E-COMMERCE"
+home.header.expert: "EXPERT"
+home.header.and: "and"
+home.header.web: "WEB"
+home.header.developer: "DEVELOPER"
+home.greeting.hi: "Hi!"
+home.greeting.intro: "Here I am"
+error.return_button: "Return to Home"
+error.not_found.desc: "The page you are looking for could not be found."
+error.something_went_wrong.desc: "Something went wrong."
