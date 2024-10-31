@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace App\Service\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
-use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -40,7 +40,7 @@ class ExceptionSubscriber implements EventSubscriberInterface
             ? $exception->getStatusCode()
             : Response::HTTP_INTERNAL_SERVER_ERROR;
 
-        if ($statusCode === Response::HTTP_NOT_FOUND) {
+        if (Response::HTTP_NOT_FOUND === $statusCode) {
             $content = $this->twig->render('_exception/error404.html.twig');
         } else {
             $content = $this->twig->render('_exception/error.html.twig', [
