@@ -1,0 +1,11 @@
+{% extends '_exception/base.html.twig' %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block body %}
+    <section class="error-page mb-4">
+        <p>{{ 'error.not_found.desc'|trans }}</p>
+        <a class="link" href="{{ path('app_home') }}">{{ 'error.return_button'|trans }}</a>
+        <img src="{{ asset('build/images/notfound.svg') }}" alt="page not found image error">
+    </section>
+{% endblock %}

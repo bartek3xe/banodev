@@ -1,30 +1,34 @@
-button.hire_me: Найняти мене
-nav.link.home: Головна
-nav.link.about: Про мене
-nav.link.offer: Пропозиція
-nav.link.work_approach: Підхід до роботи
-nav.button.color_switch: Темна / Світла
-home.profile.header: PHP-розробник, спеціаліст Symfony, творець CRM-систем та вебсайтів.
-home.box.about.desc: Професійний розробник CRM та e-commerce
-home.box.about.header: ПРО МЕНЕ
-home.box.services.desc: Спеціалізація в Symfony та Sylius
-home.box.services.header: ІНСТРУМЕНТИ
-home.box.experience.desc: Роки досвіду
-home.box.projects.desc: Реалізовані проекти
-home.box.offer.websites: Вебсайти
-home.box.offer.web_app: Веб-додатки
-home.box.offer.crm: CRM-системи
-home.box.offer.ecommerce: e-Commerce
-home.box.offer.maintenance: Підтримка та обслуговування існуючих систем
-home.box.offer.desc: Ваші цілі, моя експертиза – створимо рішення, що принесуть успіх
-home.box.offer.header: ПЕРЕГЛЯНУТИ ПРОПОЗИЦІЮ
-home.box.approach.desc: Дізнайтеся про мій підхід до співпраці з клієнтами
-home.box.approach.header: ПІДХІД ДО РОБОТИ
-home.box.contact.desc: Працюймо разом
-home.box.contact.header: НАЙНЯТИ МЕНЕ
-home.header.professional: ПРОФЕСІЙНИЙ
-home.header.crm_ecommerce: CRM / E-COMMERCE
-home.header.expert: ЕКСПЕРТ
-home.header.and: та
-home.header.web: ВЕБ
-home.header.developer: РОЗРОБНИК
+button.contact: "Контакт"
+nav.link.home: "Головна"
+nav.link.about: "Про мене"
+nav.link.offer: "Портфоліо"
+nav.link.work_approach: "Мій підхід"
+nav.button.color_switch: "Світла / Темна"
+home.profile.header: "PHP Розробник & Спеціаліст Symfony | Створення ефективних веб-рішень"
+home.box.about.desc: "Досвідчений PHP розробник, який спеціалізується на Symfony та e-commerce платформах, таких як Sylius."
+home.box.about.header: "ПРО МЕНЕ"
+home.box.services.desc: "Володію сучасними інструментами та технологіями для веб-розробки."
+home.box.services.header: "ТЕХНОЛОГІЧНИЙ СТЕК"
+home.box.experience.desc: "Роки досвіду"
+home.box.projects.desc: "Завершені проекти"
+home.box.offer.websites: "Адаптивні веб-сайти"
+home.box.offer.web_app: "Веб-застосунки"
+home.box.offer.crm: "Індивідуальні CRM-системи"
+home.box.offer.ecommerce: "Рішення для e-commerce"
+home.box.offer.maintenance: "Постійна підтримка"
+home.box.offer.desc: "Ознайомтеся з моїми проектами, які демонструють різноманітні веб-рішення, розроблені відповідно до потреб клієнта."
+home.box.offer.header: "ПОРТФОЛІО GITHUB"
+home.box.approach.desc: "Дізнайтесь мій підхід до професійного розвитку та реалізації проектів"
+home.box.approach.header: "МІЙ ПІДХІД"
+home.box.contact.desc: "Зв'яжіться, щоб обговорити потенційні проекти"
+home.box.contact.header: "КОНТАКТ"
+home.header.professional: "ПРОФЕСІЙНИЙ"
+home.header.crm_ecommerce: "CRM / E-COMMERCE"
+home.header.expert: "ЕКСПЕРТ"
+home.header.and: "та"
+home.header.web: "ВЕБ"
+home.header.developer: "РОЗРОБНИК"
+home.greeting.hi: "Привіт!"
+home.greeting.intro: "Це я"
+error.404.desc: "The page you are looking for could not be found."
+error.404.btn: "Return to Home"
