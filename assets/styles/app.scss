@@ -90,6 +90,10 @@ body.no-scroll {
   overflow: hidden;
   font-weight: bolder;
 
+  &.wide {
+    width: 100%;
+  }
+
   &:hover {
     color: vars.$third-color;
     border: solid 2px vars.$main-color;
@@ -161,4 +165,46 @@ h5 {
 
 .main-color {
   color: vars.$main-color;
+}
+
+.company-info {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+
+  .info-elem {
+    margin-right: 6px;
+  }
+
+  .info-elem:not(:last-child)::after {
+    content: "•";
+    color: vars.$text-color;
+    margin-left: 6px;
+    font-weight: bold;
+  }
+}
+
+.home-grid-container .company-info {
+  @media only screen and (width < 1000px) {
+    display: none;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 50%;
+  min-width: 150px;
+  max-width: 150px;
+}
+
+.footer-watermark {
+  font-size: 12px;
 }

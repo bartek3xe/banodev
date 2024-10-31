@@ -31,7 +31,7 @@
     <div class="nav-float right">
         <div class="nav-lang">
             <button class="nav-lang-button link">
-                {{ get_locale_name(app.locale) }}
+                <span class="nav-locale-name">{{ get_locale_name(app.locale) }}</span>
                 <i class="fi fi-{{ get_locale_flag(app.locale) }} fis fi-lang"></i>
             </button>
             <ul class="flag-dropdown">
