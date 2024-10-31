@@ -242,6 +242,12 @@ body {
   }
 
   .nav-lang {
+    @media only screen and (width < 1000px) {
+      .nav-locale-name {
+        display: none;
+      }
+    }
+
     .fi-lang {
       border: solid 1px vars.$text-color;
       border-radius: 6px;
@@ -260,7 +266,6 @@ body {
       border-radius: 12px;
       text-align: right;
       cursor: pointer;
-      min-width: 120px;
 
       &:hover {
         color: vars.$third-color;
