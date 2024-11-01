@@ -1,0 +1,61 @@
+name: Staging deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up PHP 8.3 with Composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer
+
+      - name: Add SSH private key with passphrase
+        run: |
+          echo "${{ secrets.SSH_KEY }}" > id_rsa
+          chmod 600 id_rsa
+          eval $(ssh-agent -s)
+          echo "${{ secrets.SSH_PASSPHRASE }}" | ssh-add id_rsa
+        shell: bash
+
+      - name: Set environment to production
+        run: export APP_ENV=prod
+
+      - name: Install dependencies on CI
+        run: composer install --no-dev --optimize-autoloader --no-scripts
+
+      - name: Clear cache in production mode
+        run: php bin/console cache:clear --env=prod --no-debug
+
+      - name: Install frontend dependencies
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd domains/tediefootwear.com/public_html
+            source ~/.bashrc
+            git fetch
+            git reset --hard origin/main
+            composer install --no-dev --optimize-autoloader --no-scripts
+            npx yarn install
+            npx yarn build
+            php bin/console cache:clear --env=prod --no-debug
+            php bin/console sass:build
+            php bin/console doctrine:migrations:migrate --no-interaction
