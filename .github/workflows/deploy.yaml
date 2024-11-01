@@ -36,11 +36,6 @@ jobs:
       - name: Clear cache in production mode
         run: php bin/console cache:clear --env=prod --no-debug
 
-      - name: Install frontend dependencies
-        run: |
-          npm install
-          npm run build
-
       - name: Deploy to Server
         uses: appleboy/ssh-action@master
         with:
