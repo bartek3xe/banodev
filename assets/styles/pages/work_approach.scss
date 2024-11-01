@@ -1,0 +1,56 @@
+@use '@styles/variables' as vars;
+
+.work-approach-page {
+  .intro-section, .philosophy-section, .list-section-container, .summary-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .intro-header, .section-header {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .quote {
+    font-style: italic;
+    color: rgba(145, 146, 149, 0.65);
+    margin: 10px 0;
+    font-size: 1.1em;
+    text-align: left;
+
+    @media only screen and (max-width: 1000px) {
+      font-size: .9em;
+    }
+  }
+
+  .intro-description, .section-description, .summary-description {
+    font-size: 1em;
+    color: vars.$text-color;
+    text-align: justify;
+
+    @media only screen and (max-width: 1000px) {
+      font-size: .8em;
+    }
+  }
+
+  .motivation-list, .strengths-list {
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  .motivation-list li, .strengths-list li {
+    margin: 5px 0;
+    color: vars.$text-color;
+    font-size: 1em;
+
+    @media only screen and (max-width: 1000px) {
+      font-size: .8em;
+    }
+  }
+
+  .strengths-list strong, .motivation-list strong {
+    color: vars.$main-color;
+  }
+}

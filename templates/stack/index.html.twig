@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'Stack'|trans }}{% endblock %}
+
+{% set technologies = [
+    { name: 'Symfony', level: 90, icon: 'symfony.svg' },
+    { name: 'Laravel', level: 80, icon: 'laravel.svg' },
+    { name: 'Sylius', level: 30, icon: 'sylius.svg' },
+    { name: 'Doctrine', level: 90, icon: 'doctrine.svg' },
+    { name: 'Docker', level: 60, icon: 'docker.svg' },
+    { name: 'Composer', level: 70, icon: 'composer.svg' },
+    { name: 'Redis', level: 60, icon: 'redis.svg' },
+    { name: 'Elastic Search', level: 60, icon: 'elastic_search.svg' },
+    { name: 'Typescript', level: 60, icon: 'typescript.svg' },
+    { name: 'Linux', level: 50, icon: 'linux.svg' },
+] %}
+
+{% block body %}
+    <div class="home-grid-container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="stack-page box">
+                    <section class="stack-intro">
+                        <h1 class="stack-header header">{{ 'nav.link.services'|trans }}</h1>
+                        <p class="stack-explanation">{{ 'stack.explanation'|trans }}</p>
+                        <img class="svg-picture" src="{{ asset('build/images/stack.svg') }}" alt="Stack image">
+                    </section>
+
+                    <section class="stack-experience">
+                        <h2 class="experience-header header">{{ 'stack.experience'|trans }}</h2>
+
+                        <div class="experience-list">
+                            {% for tech in technologies %}
+                                <div class="experience-item">
+                                    <div class="experience-info">
+                                        <img src="{{ asset('build/images/icons/services/' ~ tech.icon) }}"
+                                             alt="{{ tech.name }} icon" class="experience-icon">
+                                        <span class="experience-name">{{ tech.name }}</span>
+                                    </div>
+                                    <div class="experience-bar-container">
+                                        <div class="experience-bar" style="width: {{ tech.level }}%;"></div>
+                                    </div>
+                                    <span class="experience-level">{{ tech.level }}%</span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

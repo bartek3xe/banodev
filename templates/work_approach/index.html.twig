@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'work_approach.title'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="home-grid-container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="work-approach-page box">
+                    <section class="intro-section">
+                        <h1 class="intro-header">{{ 'work_approach.header'|trans }}</h1>
+                        <blockquote class="quote">"{{ 'work_approach.quote1'|trans }}"</blockquote>
+                        <p class="intro-description">{{ 'work_approach.intro'|trans }}</p>
+                        <img class="svg-picture" src="{{ asset('build/images/work_approach.svg') }}" alt="Work Approach image">
+                    </section>
+
+                    <section class="mt-4 philosophy-section">
+                        <h2 class="section-header">{{ 'work_approach.philosophy.header'|trans }}</h2>
+                        <blockquote class="quote">"{{ 'work_approach.quote2'|trans }}"</blockquote>
+                        <p class="section-description">{{ 'work_approach.philosophy.description'|trans }}</p>
+                    </section>
+                    <div class="row list-section-container">
+                        <div class="col-lg-6">
+                            <section class="mt-4 motivation-section">
+                                <h2 class="section-header">{{ 'work_approach.motivation.header'|trans }}</h2>
+                                <blockquote class="quote">"{{ 'work_approach.quote3'|trans }}"</blockquote>
+                                <ul class="motivation-list">
+                                    <li><strong>{{ 'work_approach.motivation.problem_solving'|trans }}</strong></li>
+                                    <li><strong>{{ 'work_approach.motivation.learning'|trans }}</strong></li>
+                                    <li><strong>{{ 'work_approach.motivation.efficiency'|trans }}</strong></li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="col-lg-6">
+                            <section class="mt-4 strengths-section">
+                                <h2 class="section-header">{{ 'work_approach.strengths.header'|trans }}</h2>
+                                <blockquote class="quote">"{{ 'work_approach.quote4'|trans }}"</blockquote>
+                                <ul class="strengths-list">
+                                    <li><strong>{{ 'work_approach.strengths.analytical'|trans }}</strong> - {{ 'work_approach.strengths.analytical.desc'|trans }}</li>
+                                    <li><strong>{{ 'work_approach.strengths.communication'|trans }}</strong> - {{ 'work_approach.strengths.communication.desc'|trans }}</li>
+                                    <li><strong>{{ 'work_approach.strengths.adaptability'|trans }}</strong> - {{ 'work_approach.strengths.adaptability.desc'|trans }}</li>
+                                    <li><strong>{{ 'work_approach.strengths.attention_to_detail'|trans }}</strong> - {{ 'work_approach.strengths.attention_to_detail.desc'|trans }}</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                    <section class="mt-4 summary-section">
+                        <blockquote class="quote">"{{ 'work_approach.quote5'|trans }}"</blockquote>
+                        <p class="summary-description">{{ 'work_approach.summary'|trans }}</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
