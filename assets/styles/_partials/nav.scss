@@ -18,6 +18,30 @@ body {
     }
   }
 
+  .nav-wrapper {
+    transition: opacity 0.3s ease-in-out;
+
+    &.nav-hidden {
+      opacity: 0;
+    }
+  }
+
+
+  .nav-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: vars.$nav-height;
+    z-index: 48;
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+
+    @media only screen and (width < 1000px) {
+      height: vars.$mobile-nav-height;
+    }
+  }
+
   .nav {
     border-radius: 24px;
     padding: 24px;

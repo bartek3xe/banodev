@@ -1,51 +1,54 @@
 <div class="navbar-overlay"></div>
-<nav class="nav">
-    <div class="nav-background"></div>
-    <button class="mobile-menu-btn nav-float left" aria-label="Open navigation menu">
-        <span>&#9776;</span>
-    </button>
-    <a class="nav-logo mobile-nav-logo" href="{{ path('app_home') }}">
-         <img src="{{ asset('build/images/banodev-logo-nav.png') }}" alt="Bartosz Nowak BANO logo"/>
-    </a>
-    <div class="mobile-hidden">
-        <div class="nav-float left">
-            <button class="nav-color-switch">
-                {{ 'nav.button.color_switch'|trans }}
-                <img class="img-light active" src="{{ asset('build/images/icons/switch-light-icon.svg') }}" alt="Light icon, switch to dark"/>
-                <img class="img-dark" src="{{ asset('build/images/icons/switch-dark-icon.svg') }}" alt="Dark icon, switch to light"/>
-            </button>
-        </div>
-        <a class="nav-logo" href="{{ path('app_home') }}">
+<div class="nav-wrapper">
+    <div class="nav-blur"></div>
+    <nav class="nav">
+        <div class="nav-background"></div>
+        <button class="mobile-menu-btn nav-float left" aria-label="Open navigation menu">
+            <span>&#9776;</span>
+        </button>
+        <a class="nav-logo mobile-nav-logo" href="{{ path('app_home') }}">
              <img src="{{ asset('build/images/banodev-logo-nav.png') }}" alt="Bartosz Nowak BANO logo"/>
         </a>
-        <span class="nav-pipe">|</span>
-        <ul class="nav-list">
-            <li class="nav-element"><a class="link active" href="{{ path('app_home') }}">{{ 'nav.link.home'|trans }}</a></li>
-            <li class="nav-element"><a class="link" href="{{ path('app_about') }}">{{ 'nav.link.about'|trans }}</a></li>
-            <li class="nav-element"><a class="link" href="{{ path('app_stack') }}">{{ 'nav.link.services'|trans }}</a></li>
-            <li class="nav-element"><a class="link" href="{{ path('app_work_approach') }}">{{ 'nav.link.work_approach'|trans }}</a></li>
-        </ul>
-        <span class="nav-pipe">|</span>
-        <a class="btn" href="#"><span>{{ 'button.contact'|trans }}</span></a>
-    </div>
-    <div class="nav-float right">
-        <div class="nav-lang">
-            <button class="nav-lang-button link">
-                <span class="nav-locale-name">{{ get_locale_name(app.locale) }}</span>
-                <i class="fi fi-{{ get_locale_flag(app.locale) }} fis fi-lang"></i>
-            </button>
-            <ul class="flag-dropdown">
-                {% for locale in get_all_locales() %}
-                    {% if app.locale != locale.code %}
-                        <li>
-                            <a class="link" href="{{ path('app_language_changer', { 'locale': locale.code }) }}">
-                                {{ locale.name }}
-                                <i class="fi fi-{{ locale.flag }} fis fi-lang"></i>
-                            </a>
-                        </li>
-                    {% endif %}
-                {% endfor %}
+        <div class="mobile-hidden">
+            <div class="nav-float left">
+                <button class="nav-color-switch">
+                    {{ 'nav.button.color_switch'|trans }}
+                    <img class="img-light active" src="{{ asset('build/images/icons/switch-light-icon.svg') }}" alt="Light icon, switch to dark"/>
+                    <img class="img-dark" src="{{ asset('build/images/icons/switch-dark-icon.svg') }}" alt="Dark icon, switch to light"/>
+                </button>
+            </div>
+            <a class="nav-logo" href="{{ path('app_home') }}">
+                 <img src="{{ asset('build/images/banodev-logo-nav.png') }}" alt="Bartosz Nowak BANO logo"/>
+            </a>
+            <span class="nav-pipe">|</span>
+            <ul class="nav-list">
+                <li class="nav-element"><a class="link active" href="{{ path('app_home') }}">{{ 'nav.link.home'|trans }}</a></li>
+                <li class="nav-element"><a class="link" href="{{ path('app_about') }}">{{ 'nav.link.about'|trans }}</a></li>
+                <li class="nav-element"><a class="link" href="{{ path('app_stack') }}">{{ 'nav.link.services'|trans }}</a></li>
+                <li class="nav-element"><a class="link" href="{{ path('app_work_approach') }}">{{ 'nav.link.work_approach'|trans }}</a></li>
             </ul>
+            <span class="nav-pipe">|</span>
+            <a class="btn" href="#"><span>{{ 'button.contact'|trans }}</span></a>
         </div>
-    </div>
-</nav>
+        <div class="nav-float right">
+            <div class="nav-lang">
+                <button class="nav-lang-button link">
+                    <span class="nav-locale-name">{{ get_locale_name(app.locale) }}</span>
+                    <i class="fi fi-{{ get_locale_flag(app.locale) }} fis fi-lang"></i>
+                </button>
+                <ul class="flag-dropdown">
+                    {% for locale in get_all_locales() %}
+                        {% if app.locale != locale.code %}
+                            <li>
+                                <a class="link" href="{{ path('app_language_changer', { 'locale': locale.code }) }}">
+                                    {{ locale.name }}
+                                    <i class="fi fi-{{ locale.flag }} fis fi-lang"></i>
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
