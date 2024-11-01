@@ -3,10 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageBtn = document.querySelector('.nav-lang button');
     const languageDropdown = document.querySelector('.flag-dropdown');
     const navigation = document.querySelector('nav.nav');
+    const navWrapper = document.querySelector('.nav-wrapper');
     const mobileNavBtn = document.querySelector('.mobile-menu-btn');
     const body = document.querySelector('body');
     const overlay = document.querySelector('.navbar-overlay');
     const colorSwitchBtn = document.querySelector('.nav-color-switch');
+    let lastScrollTop = window.scrollY || document.documentElement.scrollTop;
 
     document.addEventListener('click', (e) => {
         if (!languageDropdown.contains(e.target) && !languageBtn.contains(e.target)) {
@@ -46,6 +48,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navigation.addEventListener('click', (e) => {
         e.stopPropagation();
+    });
+
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollSpeed = Math.abs(scrollTop - lastScrollTop);
+
+        if (scrollTop === 0) {
+            navWrapper.classList.remove("nav-hidden");
+        } else if (scrollTop > lastScrollTop && scrollSpeed > 20) {
+            navWrapper.classList.add("nav-hidden");
+        } else if (scrollTop < lastScrollTop && scrollSpeed > 10) {
+            navWrapper.classList.remove("nav-hidden");
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
 
     colorSwitchBtn.addEventListener('click', () => {
