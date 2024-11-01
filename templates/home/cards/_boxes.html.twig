@@ -1,11 +1,11 @@
 <div class="col-md-6">
-    <a href="#" class="box-link">
+    <a href="{{ path('app_about') }}" class="box-link">
         <div class="box mb-4 about">
             <p>{{ 'home.box.about.desc'|trans }}</p>
             <h2>{{ 'home.box.about.header'|trans }}</h2>
         </div>
     </a>
-    <a href="#" class="box-link">
+    <a href="{{ path('app_stack') }}" class="box-link">
         <div class="box mb-4 services">
             <div class="service-icons mb-4">
                 <img class="icon-link" src="{{ asset('build/images/icons/services/symfony.svg') }}" alt="Symfony logo" />
@@ -67,7 +67,7 @@
     </div>
     <div class="row mb-4">
         <div class="col-lg-6">
-            <a href="#" class="box-link">
+            <a href="{{ path('app_work_approach') }}" class="box-link">
                 <div class="box mb-4 approach">
                     <p>{{ 'home.box.approach.desc'|trans }}</p>
                     <h2>{{ 'home.box.approach.header'|trans }}</h2>

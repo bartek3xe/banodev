@@ -22,8 +22,8 @@
         <ul class="nav-list">
             <li class="nav-element"><a class="link active" href="{{ path('app_home') }}">{{ 'nav.link.home'|trans }}</a></li>
             <li class="nav-element"><a class="link" href="{{ path('app_about') }}">{{ 'nav.link.about'|trans }}</a></li>
-            <li class="nav-element"><a class="link" href="#">{{ 'nav.link.services'|trans }}</a></li>
-            <li class="nav-element"><a class="link" href="#">{{ 'nav.link.work_approach'|trans }}</a></li>
+            <li class="nav-element"><a class="link" href="{{ path('app_stack') }}">{{ 'nav.link.services'|trans }}</a></li>
+            <li class="nav-element"><a class="link" href="{{ path('app_work_approach') }}">{{ 'nav.link.work_approach'|trans }}</a></li>
         </ul>
         <span class="nav-pipe">|</span>
         <a class="btn" href="#"><span>{{ 'button.contact'|trans }}</span></a>
