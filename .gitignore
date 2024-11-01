@@ -1,5 +1,6 @@
 .idea
 .ssh
+.htaccess
 
 ###> symfony/framework-bundle ###
 /.env.local
