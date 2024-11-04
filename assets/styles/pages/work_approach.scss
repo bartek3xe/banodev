@@ -1,30 +1,37 @@
 @use '@styles/variables' as vars;
 
 .work-approach-page {
-  .intro-section, .philosophy-section, .list-section-container, .summary-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .work-approach-section, .philosophy-section, .list-section-container, .summary-section {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
   }
 
-  .intro-header, .section-header {
+  .section-header {
     font-size: 2em;
     margin-bottom: 10px;
+    line-height: normal;
   }
 
   .quote {
     font-style: italic;
     color: rgba(145, 146, 149, 0.65);
     margin: 10px 0;
-    font-size: 1.1em;
+    font-size: .9em;
     text-align: left;
 
     @media only screen and (max-width: 1000px) {
-      font-size: .9em;
+      font-size: .7em;
     }
   }
 
-  .intro-description, .section-description, .summary-description {
+  .work-approach-description, .section-description, .summary-description {
     font-size: 1em;
     color: vars.$text-color;
     text-align: justify;
