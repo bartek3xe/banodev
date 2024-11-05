@@ -23,32 +23,6 @@
       .logo img {
         width: 100%;
       }
-
-      .social {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 200px;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        margin: 12px 0;
-
-        a {
-          position: relative;
-          display: inline-block;
-
-          svg {
-            width: 30px;
-            height: 30px;
-            fill: vars.$text-color;
-            transition: vars.$default-transition;
-          }
-
-          &:hover svg {
-            fill: vars.$main-color;
-          }
-        }
-      }
     }
     .service-icons {
       display: flex;

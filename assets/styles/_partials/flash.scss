@@ -1,0 +1,91 @@
+@use '@styles/variables' as vars;
+
+
+body.light {
+  .alert {
+    background-color: vars.$card-color-light;
+    box-shadow: vars.$shadow-color-dark 0 5px 10px;
+  }
+}
+
+.alert {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: vars.$card-color-dark;
+  box-shadow: vars.$shadow-color-light 0 5px 10px;
+  color: vars.$text-color;
+  padding: 1rem 2.5rem 1rem 1rem;
+  max-width: 80%;
+  margin-bottom: 1rem;
+  border-radius: .25rem;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 100;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    animation: shrink 10s linear forwards;
+  }
+}
+
+.alert-success {
+  background-color: green;
+  border-color: green;
+  color: white;
+}
+
+.alert-error {
+  background-color: red;
+  border-color: red;
+  color: white;
+}
+
+.alert-dismissible .btn-close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 101;
+  padding: 0.75rem 1rem;
+  color: white;
+  font-weight: 700;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: ease-in-out .1s;
+  opacity: 1;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.alert.fade {
+  opacity: 0;
+}
+
+.alert.show {
+  opacity: 1;
+}
+
+@keyframes shrink {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
+  }
+}

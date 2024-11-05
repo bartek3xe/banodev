@@ -1,6 +1,7 @@
 @use '@styles/_variables.scss' as vars;
 @use '@fonts/_fonts.scss';
 @use '@styles/_partials/nav.scss';
+@use '@styles/_partials/flash.scss';
 @use '@styles/pages/error.scss';
 @use '@styles/pages/home.scss';
 @use '@styles/pages/about.scss';
@@ -221,5 +222,31 @@ footer {
 
   &.small {
     max-width: 350px;
+  }
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 200px;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 12px 0;
+
+  a {
+    position: relative;
+    display: inline-block;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: vars.$text-color;
+      transition: vars.$default-transition;
+    }
+
+    &:hover svg {
+      fill: vars.$main-color;
+    }
   }
 }

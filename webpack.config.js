@@ -14,6 +14,7 @@ Encore
     //.setManifestKeyPrefix('build/')
     .addEntry('app', './assets/app.js')
     .addEntry('js/nav', './assets/js/nav.js')
+    .addEntry('js/flash', './assets/js/flash.js')
 
     .splitEntryChunks()
     .enableSingleRuntimeChunk()
