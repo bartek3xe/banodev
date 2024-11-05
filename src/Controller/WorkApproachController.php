@@ -14,8 +14,6 @@ class WorkApproachController extends AbstractController
     #[Route('work-approach', name: 'work_approach')]
     public function index(): Response
     {
-        return $this->render('work_approach/index.html.twig', [
-            'title' => 'Work Approach',
-        ]);
+        return $this->render('work_approach/index.html.twig');
     }
 }

@@ -45,7 +45,6 @@ about.timeline.conicode.description: "W Conicode stworzyłem non-profit grupę p
 stack.explanation: "Oto lista technologii i narzędzi, w których jestem biegły. Pełny pasek oznacza zaawansowaną biegłość, co wskazuje na umiejętność samodzielnego rozwiązywania złożonych zadań."
 stack.experience.legend: "Pełny pasek oznacza szybkie rozwiązywanie zadań w danej technologii bez żadnej pomocy, nawet przy zaawansowanych wyzwaniach."
 stack.experience: "Doświadczenie"
-work_approach.title: "Moje podejście do pracy"
 work_approach.header: "Moje podejście do pracy"
 work_approach.quote1: "Prostota i przejrzystość to klucz do skutecznego kodu."
 work_approach.intro: "Jako developer cenię sobie tworzenie rozwiązań, które są nie tylko funkcjonalne, ale również skalowalne i łatwe w utrzymaniu. Moim celem jest dostarczenie kodu, który ma wartość i trwałość."
@@ -77,3 +76,8 @@ contact.form.submit.placeholder: Wyślij
 contact.success_message: Twoja wiadomość została wysłana pomyślnie! Skontaktujemy się z Tobą wkrótce.
 contact.recaptcha_failed: Weryfikacja reCAPTCHA nie powiodła się. Spróbuj ponownie.
 contact.submission_problem: Wystąpił problem z przesłaniem formularza. Sprawdź błędy i spróbuj ponownie.
+home.title: Strona główna
+contact.title: Kontakt
+work_approach.title: Podejście do pracy
+stack.title: Stack technologiczny
+about.title: O mnie

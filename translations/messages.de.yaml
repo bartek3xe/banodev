@@ -45,7 +45,6 @@ about.timeline.conicode.description: "Bei Conicode gründete ich eine gemeinnüt
 stack.explanation: "Dies ist die Liste der Technologien und Werkzeuge, in denen ich erfahren bin. Ein voller Balken bedeutet fortgeschrittene Kompetenz und die Fähigkeit, komplexe Aufgaben eigenständig zu lösen."
 stack.experience.legend: "Ein voller Balken bedeutet schnelle Aufgabenlösung in der Technologie ohne Hilfe, selbst bei fortgeschrittenen Herausforderungen."
 stack.experience: "Erfahrung"
-work_approach.title: "Mein Arbeitsansatz"
 work_approach.header: "Mein Arbeitsansatz"
 work_approach.quote1: "Einfachheit und Klarheit sind der Schlüssel zu effektivem Code."
 work_approach.intro: "Als Entwickler lege ich Wert auf die Erstellung von Lösungen, die nicht nur funktional, sondern auch skalierbar und wartbar sind. Mein Ziel ist es, Code zu liefern, der Wert und Langlebigkeit hat."
@@ -77,3 +76,8 @@ contact.form.submit.placeholder: Senden
 contact.success_message: Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns bald bei Ihnen melden.
 contact.recaptcha_failed: Die reCAPTCHA-Überprüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut.
 contact.submission_problem: Bei der Übermittlung ist ein Problem aufgetreten. Überprüfen Sie das Formular auf Fehler und versuchen Sie es erneut.
+home.title: Startseite
+contact.title: Kontakt
+work_approach.title: Arbeitsansatz
+stack.title: Technologiestack
+about.title: Über mich
