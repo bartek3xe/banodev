@@ -69,3 +69,11 @@ work_approach.strengths.attention_to_detail: "Attention to detail"
 work_approach.strengths.attention_to_detail.desc: "I pay attention to details, which reflects in code quality."
 work_approach.quote5: "Growth is a continuous process – I’m ready for the next challenges."
 work_approach.summary: "I constantly strive to improve my skills and expand my knowledge to meet new challenges in the ever-evolving tech landscape."
+contact.header: Contact me
+contact.form.email.placeholder: E-mail
+contact.form.subject.placeholder: Title
+contact.form.message.placeholder: Message
+contact.form.submit.placeholder: Send
+contact.success_message: Your message has been sent successfully! We will get back to you soon.
+contact.recaptcha_failed: reCAPTCHA verification failed. Please try again.
+contact.submission_problem: There was a problem with your submission. Please check the form for errors and try again.

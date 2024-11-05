@@ -69,3 +69,11 @@ work_approach.strengths.attention_to_detail: "Dbałość o szczegóły"
 work_approach.strengths.attention_to_detail.desc: "Zwracam uwagę na detale, co przekłada się na jakość kodu."
 work_approach.quote5: "Rozwój to proces ciągły – jestem gotów na kolejne wyzwania."
 work_approach.summary: "Stale dążę do doskonalenia swoich umiejętności i poszerzania wiedzy, aby sprostać nowym wyzwaniom w dynamicznie zmieniającym się świecie technologii."
+contact.header: Skontaktuj się ze mną
+contact.form.email.placeholder: E-mail
+contact.form.subject.placeholder: Temat
+contact.form.message.placeholder: Wiadomość
+contact.form.submit.placeholder: Wyślij
+contact.success_message: Twoja wiadomość została wysłana pomyślnie! Skontaktujemy się z Tobą wkrótce.
+contact.recaptcha_failed: Weryfikacja reCAPTCHA nie powiodła się. Spróbuj ponownie.
+contact.submission_problem: Wystąpił problem z przesłaniem formularza. Sprawdź błędy i spróbuj ponownie.
