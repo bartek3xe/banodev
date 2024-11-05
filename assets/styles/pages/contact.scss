@@ -1,0 +1,98 @@
+@use '@styles/variables' as vars;
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+
+  .contact-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+    .section-header {
+      font-size: 2em;
+      margin-bottom: 10px;
+      line-height: normal;
+    }
+
+    .contact-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        max-width: 100%;
+        margin-bottom: 12px;
+        border: 1px solid vars.$text-color;
+        background: none;
+        color: vars.$text-color;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 1em;
+
+        &:focus {
+          border: 1px solid vars.$main-color;
+          outline: none;
+        }
+      }
+
+      textarea {
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: vars.$main-color;
+          border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: vars.$background-color-dark;
+          border-radius: 4px;
+        }
+      }
+
+      button {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page .contact-section {
+    max-width: 90%;
+    padding: 15px;
+
+    .section-header {
+      font-size: 1.8em;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page .contact-section {
+    max-width: 100%;
+    padding: 10px;
+
+    .section-header {
+      font-size: 1.5em;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.9em;
+      padding: 8px;
+    }
+  }
+}
