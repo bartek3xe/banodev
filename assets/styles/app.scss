@@ -87,8 +87,8 @@ body.no-scroll {
 
 .btn {
   position: relative;
-  border: solid 2px vars.$text-color;
-  padding: 6px;
+  border: solid 1px vars.$text-color;
+  padding: 6px 12px;
   border-radius: 6px;
   text-decoration: none;
   color: vars.$text-color;
@@ -102,7 +102,7 @@ body.no-scroll {
 
   &:hover {
     color: vars.$third-color;
-    border: solid 2px vars.$main-color;
+    border: solid 1px vars.$main-color;
   }
 
   &::after {
