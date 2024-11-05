@@ -13,28 +13,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up PHP 8.3 with Composer
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.3'
-          tools: composer
-
-      - name: Add SSH private key with passphrase
+      - name: Add SSH private key
         run: |
-          echo "${{ secrets.SSH_KEY }}" > id_rsa
-          chmod 600 id_rsa
-          eval $(ssh-agent -s)
-          echo "${{ secrets.SSH_PASSPHRASE }}" | ssh-add id_rsa
-        shell: bash
-
-      - name: Set environment to production
-        run: export APP_ENV=prod
-
-      - name: Install dependencies on CI
-        run: composer install --no-dev --optimize-autoloader --no-scripts
-
-      - name: Clear cache in production mode
-        run: php bin/console cache:clear --env=prod --no-debug
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/id_rsa
 
       - name: Deploy to Server
         uses: appleboy/ssh-action@master
@@ -44,13 +29,14 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd domains/tediefootwear.com/public_html
-            source ~/.bashrc
-            git fetch
+            cd domains/banodev.pl/public_html
+            git status
+            git log -1
+            git fetch origin main
             git reset --hard origin/main
-            composer install --no-dev --optimize-autoloader --no-scripts
-            npx yarn install
-            npx yarn build
+            git status
+            git log -1
+            composer install --no-dev --optimize-autoloader --no-scripts --force
+            yarn install --frozen-lockfile --force
+            yarn build
             php bin/console cache:clear --env=prod --no-debug
-            php bin/console sass:build
-            php bin/console doctrine:migrations:migrate --no-interaction
