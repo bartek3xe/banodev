@@ -14,8 +14,6 @@ class StackController extends AbstractController
     #[Route('stack', name: 'stack')]
     public function index(): Response
     {
-        return $this->render('stack/index.html.twig', [
-            'title' => 'Stack',
-        ]);
+        return $this->render('stack/index.html.twig');
     }
 }
