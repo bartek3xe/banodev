@@ -1,4 +1,4 @@
-name: Staging Deploy
+name: Staging deploy
 
 on:
   push:
@@ -11,16 +11,30 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
+
+      - name: Set up PHP 8.3 with Composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer
 
       - name: Add SSH private key with passphrase
-        env:
-          SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
         run: |
-          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          eval "$(ssh-agent -s)"
-          echo "$SSH_PASSPHRASE" | ssh-add ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_KEY }}" > id_rsa
+          chmod 600 id_rsa
+          eval $(ssh-agent -s)
+          echo "${{ secrets.SSH_PASSPHRASE }}" | ssh-add id_rsa
+        shell: bash
+
+      - name: Set environment to production
+        run: export APP_ENV=prod
+
+      - name: Install dependencies on CI
+        run: composer install --no-dev --optimize-autoloader --no-scripts
+
+      - name: Clear cache in production mode
+        run: php bin/console cache:clear --env=prod --no-debug
 
       - name: Deploy to Server
         uses: appleboy/ssh-action@master
@@ -30,16 +44,13 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no"
             cd domains/tediefootwear.com/public_html
-            git status
-            git log -1
-            git fetch origin main
+            source ~/.bashrc
+            git fetch
             git reset --hard origin/main
-            git status
-            git log -1
-            composer install --no-dev --optimize-autoloader --no-scripts --force
-            npx yarn install --frozen-lockfile --force
+            composer install --no-dev --optimize-autoloader --no-scripts
+            npx yarn install
             npx yarn build
             php bin/console cache:clear --env=prod --no-debug
             php bin/console sass:build
+            php bin/console doctrine:migrations:migrate --no-interaction
