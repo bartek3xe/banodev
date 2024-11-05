@@ -1,0 +1,37 @@
+{{ form_start(form, {
+    'attr': {
+        'class': 'contact-form'
+    }})
+}}
+
+{{ form_widget(form.email, {
+    'attr': {
+        'class': 'form-input',
+        'placeholder': 'contact.form.email.placeholder'|trans,
+    }})
+}}
+
+{{ form_widget(form.subject, {
+    'attr': {
+        'class': 'form-input',
+        'placeholder': 'contact.form.subject.placeholder'|trans,
+    }})
+}}
+
+{{ form_widget(form.body, {
+    'attr': {
+        'class': 'textarea-form-input',
+        'placeholder': 'contact.form.message.placeholder'|trans,
+    }})
+}}
+
+<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+
+{{ form_widget(form.submit, {
+    'label': 'contact.form.submit.placeholder'|trans,
+    'attr': {
+        'class': 'send-input btn btn-primary',
+    }})
+}}
+
+{{ form_end(form) }}
