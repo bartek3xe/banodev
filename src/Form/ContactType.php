@@ -27,7 +27,6 @@ class ContactType extends AbstractType
             ->add('body', TextareaType::class, [
                 'required' => true,
             ])
-            ->add('submit', SubmitType::class)
         ;
     }
 

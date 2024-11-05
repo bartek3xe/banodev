@@ -1,6 +1,7 @@
 {{ form_start(form, {
     'attr': {
-        'class': 'contact-form'
+        'class': 'contact-form',
+        'autocomplete': 'off'
     }})
 }}
 
@@ -22,16 +23,14 @@
     'attr': {
         'class': 'textarea-form-input',
         'placeholder': 'contact.form.message.placeholder'|trans,
+        'rows': 5,
     }})
 }}
 
 <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
 
-{{ form_widget(form.submit, {
-    'label': 'contact.form.submit.placeholder'|trans,
-    'attr': {
-        'class': 'send-input btn btn-primary',
-    }})
-}}
+<button type="submit" class="btn">
+    <span>{{ 'contact.form.submit.placeholder'|trans }}</span>
+</button>
 
 {{ form_end(form) }}
