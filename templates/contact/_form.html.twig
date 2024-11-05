@@ -1,0 +1,36 @@
+{{ form_start(form, {
+    'attr': {
+        'class': 'contact-form',
+        'autocomplete': 'off'
+    }})
+}}
+
+{{ form_widget(form.email, {
+    'attr': {
+        'class': 'form-input',
+        'placeholder': 'contact.form.email.placeholder'|trans,
+    }})
+}}
+
+{{ form_widget(form.subject, {
+    'attr': {
+        'class': 'form-input',
+        'placeholder': 'contact.form.subject.placeholder'|trans,
+    }})
+}}
+
+{{ form_widget(form.body, {
+    'attr': {
+        'class': 'textarea-form-input',
+        'placeholder': 'contact.form.message.placeholder'|trans,
+        'rows': 5,
+    }})
+}}
+
+<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+
+<button type="submit" class="btn">
+    <span>{{ 'contact.form.submit.placeholder'|trans }}</span>
+</button>
+
+{{ form_end(form) }}

@@ -69,3 +69,11 @@ work_approach.strengths.attention_to_detail: "Увага до деталей"
 work_approach.strengths.attention_to_detail.desc: "Звертаю увагу на деталі, що відображається на якості коду."
 work_approach.quote5: "Розвиток – це безперервний процес – я готовий до нових викликів."
 work_approach.summary: "Я постійно прагну вдосконалювати свої навички та розширювати знання, щоб відповідати новим викликам у світі технологій, що постійно змінюється."
+contact.header: Зв'яжіться зі мною
+contact.form.email.placeholder: Електронна пошта
+contact.form.subject.placeholder: Тема
+contact.form.message.placeholder: Повідомлення
+contact.form.submit.placeholder: Відправити
+contact.success_message: Ваше повідомлення успішно надіслано! Ми зв’яжемося з вами незабаром.
+contact.recaptcha_failed: Перевірка reCAPTCHA не вдалася. Будь ласка, спробуйте ще раз.
+contact.submission_problem: Виникла проблема з відправкою форми. Перевірте помилки та спробуйте ще раз.

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="home-grid-container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="contact-page box">
+                <section class="contact-section">
+                    <h1 class="section-header">{{ 'contact.header'|trans }}</h1>
+                    <img class="svg-picture mb-4" src="{{ asset('build/images/send_email.svg') }}" alt="Contact image">
+                    <div class="contact-form">
+                        {% include('contact/_form.html.twig') %}
+                    </div>
+                    <hr>
+                    <div class="mt-2 d-flex justify-content-center">
+                        {{ include('_partials/_social.html.twig') }}
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
