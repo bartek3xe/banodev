@@ -1,4 +1,4 @@
-name: Staging Deploy
+name: Staging deploy
 
 on:
   push:
@@ -11,16 +11,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Add SSH private key with passphrase
-        env:
-          SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
+      - name: Add SSH private key
         run: |
+          mkdir -p ~/.ssh
           echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           eval "$(ssh-agent -s)"
-          echo "$SSH_PASSPHRASE" | ssh-add ~/.ssh/id_rsa
+          ssh-add ~/.ssh/id_rsa
 
       - name: Deploy to Server
         uses: appleboy/ssh-action@master
@@ -30,8 +29,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no"
-            cd domains/tediefootwear.com/public_html
+            cd domains/banodev.pl/public_html
             git status
             git log -1
             git fetch origin main
@@ -39,7 +37,6 @@ jobs:
             git status
             git log -1
             composer install --no-dev --optimize-autoloader --no-scripts --force
-            npx yarn install --frozen-lockfile --force
-            npx yarn build
+            yarn install --frozen-lockfile --force
+            yarn build
             php bin/console cache:clear --env=prod --no-debug
-            php bin/console sass:build
