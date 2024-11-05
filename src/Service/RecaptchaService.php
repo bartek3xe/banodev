@@ -38,10 +38,10 @@ class RecaptchaService
                 && $responseData['success']
                 && $responseData['score'] >= 0.5;
         } catch (
-        ClientExceptionInterface|
-        TransportExceptionInterface|
-        ServerExceptionInterface|
-        RedirectionExceptionInterface $e
+            ClientExceptionInterface|
+            TransportExceptionInterface|
+            ServerExceptionInterface|
+            RedirectionExceptionInterface $e
         ) {
             return false;
         }
