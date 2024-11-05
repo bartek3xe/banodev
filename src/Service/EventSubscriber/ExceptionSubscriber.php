@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Component\HttpKernel\KernelInterface;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -16,8 +17,10 @@ use Twig\Error\SyntaxError;
 
 class ExceptionSubscriber implements EventSubscriberInterface
 {
-    public function __construct(private readonly Environment $twig)
-    {
+    public function __construct(
+        private readonly Environment $twig,
+        private readonly KernelInterface $kernel,
+    ) {
     }
 
     public static function getSubscribedEvents(): array
@@ -34,6 +37,10 @@ class ExceptionSubscriber implements EventSubscriberInterface
      */
     public function onKernelException(ExceptionEvent $event): void
     {
+        if ('prod' !== $this->kernel->getEnvironment()) {
+            return;
+        }
+
         $exception = $event->getThrowable();
 
         $statusCode = $exception instanceof HttpExceptionInterface
