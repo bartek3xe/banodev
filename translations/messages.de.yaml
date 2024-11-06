@@ -76,6 +76,7 @@ contact.form.submit.placeholder: Senden
 contact.success_message: Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns bald bei Ihnen melden.
 contact.recaptcha_failed: Die reCAPTCHA-Überprüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut.
 contact.submission_problem: Bei der Übermittlung ist ein Problem aufgetreten. Überprüfen Sie das Formular auf Fehler und versuchen Sie es erneut.
+contact.mailer_error: Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.
 home.title: Startseite
 contact.title: Kontakt
 work_approach.title: Arbeitsansatz

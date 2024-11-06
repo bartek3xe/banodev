@@ -76,6 +76,7 @@ contact.form.submit.placeholder: Send
 contact.success_message: Your message has been sent successfully! We will get back to you soon.
 contact.recaptcha_failed: reCAPTCHA verification failed. Please try again.
 contact.submission_problem: There was a problem with your submission. Please check the form for errors and try again.
+contact.mailer_error: An error occurred while sending your message. Please try again later.
 home.title: Home
 contact.title: Contact
 work_approach.title: Work Approach

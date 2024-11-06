@@ -76,6 +76,7 @@ contact.form.submit.placeholder: Відправити
 contact.success_message: Ваше повідомлення успішно надіслано! Ми зв’яжемося з вами незабаром.
 contact.recaptcha_failed: Перевірка reCAPTCHA не вдалася. Будь ласка, спробуйте ще раз.
 contact.submission_problem: Виникла проблема з відправкою форми. Перевірте помилки та спробуйте ще раз.
+contact.mailer_error: Виникла помилка під час надсилання вашого повідомлення. Спробуйте ще раз пізніше.
 home.title: Головна сторінка
 contact.title: Контакт
 work_approach.title: Підхід до роботи
