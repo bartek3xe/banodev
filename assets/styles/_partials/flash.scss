@@ -1,13 +1,5 @@
 @use '@styles/variables' as vars;
 
-
-body.light {
-  .alert {
-    background-color: vars.$card-color-light;
-    box-shadow: vars.$shadow-color-dark 0 5px 10px;
-  }
-}
-
 .alert {
   position: fixed;
   bottom: 0;
@@ -29,12 +21,13 @@ body.light {
     content: '';
     display: block;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
     height: 4px;
-    background-color: white;
+    background-color: vars.$background-color-light;
     animation: shrink 10s linear forwards;
+    border-radius: .5rem;
   }
 }
 
