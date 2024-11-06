@@ -19,6 +19,7 @@
         "symfony/http-client": "7.1.*",
         "symfony/mailer": "7.1.*",
         "symfony/messenger": "7.1.*",
+        "symfony/redis-messenger": "7.1.*",
         "symfony/runtime": "7.1.*",
         "symfony/translation": "7.1.*",
         "symfony/twig-bundle": "7.1.*",
