@@ -15,11 +15,25 @@
                     </div>
                     <hr>
                     <div class="mt-2 d-flex justify-content-center">
-                        {{ include('_partials/_social.html.twig') }}
+                        {% include('_partials/_social.html.twig') %}
                     </div>
                 </section>
             </div>
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="https://www.google.com/recaptcha/api.js?render={{ google_recaptcha_site_key }}"></script>
+
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('{{ google_recaptcha_site_key }}', {action: 'contact'}).then(function(token) {
+                document.getElementById('g-recaptcha-response').value = token;
+            });
+        });
+    </script>
 {% endblock %}
